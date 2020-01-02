@@ -1,0 +1,21 @@
+
+.btn
+{
+  width: 200px;
+  margin-left: 44%;
+  border-radius: 10px;
+    
+}
+
+hr{
+    border-top: 2px black;
+  }
+/* 
+  .is-invalid
+  {
+      border: red;
+      outline: red;
+      box-shadow: red;
+      outline-color: red;
+  } */
+  

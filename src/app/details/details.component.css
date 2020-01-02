@@ -1,0 +1,18 @@
+*
+{
+    margin:0;
+    padding: 0;
+
+}
+
+.details
+{
+   font-size: 30px;
+   position: absolute;
+   width: 60%;
+   height: 110%;
+   left: 20%;
+   padding: 20px;
+   padding-left: 30px;
+   
+}
