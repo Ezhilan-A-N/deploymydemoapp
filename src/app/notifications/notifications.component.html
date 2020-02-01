@@ -1,0 +1,40 @@
+<br>
+<div class="card" style="margin-left: 40px;margin-right: 20px;">
+    <div class="card-header" style="color: white; background-color: rgb(19, 19, 20);">
+        <h4>Circular</h4>
+    </div>
+
+    <div class="card-body yes" style="width:850px; height:470px; ">
+    <div class="container">
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home"><b>COLLEGE</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1"><b>DEPARTMENT</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2"><b>EVENTS</b></a>
+          </li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active"><br>
+            <li   *ngFor="let str1 of circ1">{{str1}}</li>
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+           
+            <li   *ngFor="let str2 of circ2">{{str2}}</li>
+          </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+             <li   *ngFor="let str3 of circ3">{{str3}}</li>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="card-footer text-muted">Last day ago</div>
+  </div>

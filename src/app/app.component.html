@@ -1,128 +1,22 @@
-<div class="myborder">
-  <div class="container-fluid">
-   
-    <!-- <div class="border"> -->
-      <h1>SIMPLE FORM</h1>
-      
-  <form action="./extra.html" #form="ngForm" required >
-      
-      <!-- {{form.value| json}} -->
-      <hr>
-       
-  
-      <div class="form-group">
-     <label>UserName :</label>
-     <input type="text" name="name" class="form-control"  placeholder="Enter the Name"
-     [(ngModel)]="usermodel.name" #name="ngModel" required 
-      [class.is-invalid]="name.invalid && name.touched">
-     <small *ngIf="name.invalid && name.touched" style="color:red">
-      Name is required </small>
-     </div>
-     
-      
-     
-  
-      
-     <div class="form-group" >
-      <label>College :</label>
-      <input type="text"  name="college" class="form-control" placeholder="Enter College"
-       [(ngModel)]="usermodel.college"  #college="ngModel" required 
-       [class.is-invalid]="college.invalid && college.touched" >   
-       <small *ngIf="college.invalid && college.touched" style="color:red">
-        College is required </small>
-     </div>
-  
-  
-  
-  
-     <div class="form-group" >
-      <label>Roll No:</label>
-      <input type="text"  name="number" class="form-control"  placeholder="Enter Roll-No"
-       [(ngModel)]="usermodel.number" #number="ngModel" required 
-       [class.is-invalid]="number.invalid && number.touched">   
-       <small *ngIf="number.invalid && number.touched" style="color:blueviolet">
-        Roll-No is required </small>
-     </div>
-  
-       
-       
-     <div class="form-group" >
-      <label>Year :</label>
-      <input type="tel" name="year" class="form-control"  placeholder="Enter year"
-       [(ngModel)]="usermodel.year"  #year="ngModel" required 
-       [class.is-invalid]="year.invalid && year.touched">   
-       <small *ngIf="year.invalid && year.touched" style="color:green">
-        Year is needed </small>
-     </div>
-  
-     <div class="form-group" >
-      <label>DOB :</label>
-      <input type="text" name="dob" class="form-control" placeholder="Enter D.O.B" 
-      [(ngModel)]="usermodel.dob" #dob="ngModel" required 
-      [class.is-invalid]="dob.invalid && dob.touched">   
-      <small *ngIf="dob.invalid && dob.touched" style="color:purple">
-        DOB is required </small>
-     </div>
+<app-header></app-header>
+<br>
 
 
-     
-     <div class="form-group" >
-      <label>Email :</label>
-      <input type="email" name="email" class="form-control" placeholder="Enter Email" 
-      [(ngModel)]="usermodel.email" #email="ngModel" required 
-      [class.is-invalid]="email.invalid && email.touched">   
-      <small *ngIf="email.invalid && email.touched" style="color:purple">
-        Email is required </small>
-     </div>
-  
-  
-      <div class="form-group">
-      <label>Phone No:</label>
-      <input type="tel" name="phone" class="form-control" placeholder="Enter Phone No" 
-      [(ngModel)]="usermodel.phone" #phone="ngModel" required 
-      [class.is-invalid]="phone.invalid && phone.touched">
-      <small *ngIf="phone.invalid && phone.touched" style="color:red">
-       required </small>
-      </div>
-      
-      <!--
-      <div class="form-group">
-        <label>Time preference:</label>
-        <div class="form-check">
-          <input class="form-control" type="radio" name="timePreference" value="morning" 
-          [(ngModel)]="usermodel.timePreference" #timePreference="ngModel" required 
-          [class.is-invalid]="timePreference.invalid && timePreference.touched">   
-          <small *ngIf="timePreference.invalid && timePreference.touched" style="color:red">
-          <label class="form-check-label">
-            Morning (8AM - 12PM)</label>
-        </div>
-        <div class="form-check">
-          <input class="form-control" type="radio" name="timePreference" value="evening"
-          [(ngModel)]="usermodel.timePreference" #timePreference="ngModel" required 
-          [class.is-invalid]="timePreference.invalid && timePreference.touched">   
-          <small *ngIf="timePreference.invalid && timePreference.touched" style="color:red">
-          <label class="form-check-label">Evening (1PM - 5PM)</label>
-        </div>
-  
-      
-
-        <div class="form-group">
-          <input class="form-control" name="check" ngModel type="checkbox">
-          <label class="form-check-label"
-          [(ngModel)]="usermodel.check" #check="ngModel" required 
-          [class.is-invalid]="check.invalid && check.touched">
-          <small *ngIf="check.invalid && check.touched" style="color:red">
-            I accept the terms and conditions**
-          </label>
-        </div>   
-      -->   
-      <button  [disabled]="form.invalid" (click)="onclick()" class="btn btn-primary " type="submit"> Register</button>
-      
-  </form> 
-  
-    </div>
+<div class="row">
+  <div class="col-sm-8 app-notifications">
+       <app-notifications></app-notifications>
   </div>
-  
-  
-  <app-details *ngIf="formSubmit" [model]="form.value"></app-details>
-  
+
+  <div class="col-sm-4 details">
+        <app-profile></app-profile>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 circular">
+   <app-circular></app-circular>
+  </div>
+</div>
+
+
+<app-quick></app-quick>
